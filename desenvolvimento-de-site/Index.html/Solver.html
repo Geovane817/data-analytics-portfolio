@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<!-- Define a language -->
+<html lang="en-us">
+
+<!-- Define webpage head -->
+<head>
+    <!-- Ensures correct text encoding -->
+    <meta charset="UTF-8">
+    <!-- Makes the page responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEA Applications - Solver</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/teste.css">  <!-- Link to external CSS -->
+    <link rel="stylesheet" type="text/css" href="../CSS/chatbot.css">  <!-- Link to external CSS -->
+    <link rel="icon" href="../Image/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="../JavaScript/script_2.js" defer></script>
+</head>
+
+<body>
+
+    <nav>
+        <a class="a-menu" href="index.html" target="_blank">Main Page</a>
+        <a class="a-menu" href="Pre-Processing.html" target="_blank">Pre-Processing</a>
+        <a class="a-menu" href="Solver.html" target="_blank">Solver</a>
+        <a class="a-menu" href="Post-Processing.html" target="_blank">Post-Processing</a>
+        <a class="a-menu" href="Examples.html" target="_blank">Examples</a>
+    </nav>
+    
+    <header> 
+        <video class="carro_simulacao" controls>
+            <source src="../Video/show3.mp4" type="video/mp4">
+            <source src="../Video/show3.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </header>
+
+    <main>
+        <h1>The Solver Step in Finite Element Analysis (FEA)</h1>
+
+        <p>The solver step in the Finite Element Method (FEM) is where the actual computation takes place, solving the system of equations that arise from the discretization of the problem during the pre-processing phase. Here, the FEM model is analyzed, and the numerical solution to the problem is found. This step can be broken down into several key phases:</p>
+
+        <!-- Formulation of the System of Equations Section -->
+        <section>
+            <h2>1. Formulation of the System of Equations</h2>
+            <p>After meshing the model and applying boundary conditions, loads, and material properties, the FEM software formulates a system of linear or non-linear equations. These equations represent the behavior of each element in the mesh and their interactions. The types of equations depend on the analysis type:</p>
+            <ul>
+                <li><strong>Static Analysis:</strong> Results in linear equations relating displacements to applied forces.</li>
+                <li><strong>Dynamic Analysis:</strong> Equations account for mass, damping, and time-dependent forces.</li>
+                <li><strong>Nonlinear Problems:</strong> These involve more complex systems requiring iterative methods.</li>
+            </ul>
+        </section>
+
+        <!-- Matrix Assembly Section -->
+        <section>
+            <h2>2. Matrix Assembly</h2>
+            <p>In FEM, the global system of equations is constructed by combining the individual element stiffness matrices (or other property matrices, depending on the analysis type). Each element has its own matrix, derived based on its material properties, shape, and boundary conditions. These local matrices are then assembled into a global matrix that represents the entire system. The global system is typically represented as:</p>
+            <pre><code>K⋅u = F</code></pre>
+        </section>
+
+        <!-- Solution of the System Section -->
+        <section>
+            <h2>3. Solution of the System</h2>
+            <p>Once the system of equations is assembled, the solver proceeds to solve for the unknowns, such as displacements, stresses, or temperatures, depending on the type of analysis. The approach varies based on the nature of the system:</p>
+            <ul>
+                <li><strong>Linear Solvers:</strong> Direct solvers (e.g., Gaussian elimination or LU decomposition) or iterative solvers (e.g., conjugate gradient or GMRES) are used for linear problems.</li>
+                <li><strong>Nonlinear Solvers:</strong> Iterative solvers like Newton-Raphson are used for nonlinear problems, with the process repeating until convergence is achieved.</li>
+                <li><strong>Time-dependent Solvers:</strong> For dynamic or transient analyses, time-stepping methods such as the Newmark method or Runge-Kutta method are often employed.</li>
+            </ul>
+        </section>
+
+        <!-- Convergence Check Section -->
+        <section>
+            <h2>4. Convergence Check</h2>
+            <p>In nonlinear or time-dependent problems, the solver checks for convergence, which means ensuring that the solution has stabilized and that further iterations are yielding consistent results. Convergence criteria typically rely on the change in unknowns (such as displacements or forces) between iterations or time steps. This check is vital for ensuring the accuracy of the solution.</p>
+        </section>
+    </main>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            FEA Chatbot
+            <button id="minimize-btn">&#8212;</button> <!-- Minimize button -->
+        </div>
+        <div class="chatbot-messages">
+            <div class="message bot-message">Hi there! How can I help you about FEA and FEM today?</div>
+            <div class="message user-message">What is FEM?</div>
+            <div class="message bot-message">FEM stands for Finite Element Method...</div>
+        </div>
+        <div class="chatbot-input-area">
+            <input type="text" class="chatbot-input" placeholder="Type your message...">
+            <button class="chatbot-send-button">Send</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;2025 - Developed by Geovane. All rights reserved.</p>
+    </footer>
+    
+    <script src="../JavaScript/chatbot.js" defer></script>
+    
+</body>
+
+</html>

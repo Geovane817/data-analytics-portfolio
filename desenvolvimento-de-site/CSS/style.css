@@ -1,0 +1,59 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif; /* Use a clean sans-serif font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text */
+}
+
+h1 {
+    text-align: center;
+    color: #3a3a3a; /* Blue color for the header */
+}
+
+/* Header Style */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+/* Navigation Style */
+nav {
+    background-color: #333; /* Dark background for the navigation bar */
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white; /* White text color */
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    background-color: #575757; /* Darker gray on hover */
+}
+
+/* Paragraph Style */
+p {
+    margin: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Footer Style (Optional) */
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 40px;
+}
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <!-- Ensures correct text encoding -->
+    <meta charset="UTF-8">
+    <!-- Makes the page responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEA Applications - Pre</title>
+    <link rel="icon" href="../Image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../CSS/teste.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/chatbot.css">  <!-- Link to external CSS -->
+</head>
+
+<body>
+
+    <nav>
+        <a class="a-menu" href="index.html" target="_blank">Main Page</a>
+        <a class="a-menu" href="Pre-Processing.html" target="_blank">Pre-Processing</a>
+        <a class="a-menu" href="Solver.html" target="_blank">Solver</a>
+        <a class="a-menu" href="Post-Processing.html" target="_blank">Post-Processing</a>
+        <a class="a-menu" href="Examples.html" target="_blank">Examples</a>
+    </nav>
+
+    <header>
+        <video class="carro_simulacao" controls>
+            <source src="../Video/show3.mp4" type="video/mp4">
+            <source src="../Video/show3.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </header>
+
+    <!-- Pre-processing Section -->
+    <main>
+        <section class="content">
+            <h1>Pre-processing in FEA</h1>
+
+            <p>Pre-processing refers to the stage where you prepare the necessary data and models for the analysis. This step sets the foundation for the simulation and ensures the quality and accuracy of the results. Pre-processing typically involves the following main tasks:</p>
+            
+            <section>
+                <h2>1. Geometry Creation</h2>
+                <p>This is where you define the shape or geometry of the physical structure or system you're analyzing. You can create this geometry using specialized CAD (Computer-Aided Design) software or directly in FEM software, depending on the tools you're using.</p>
+            </section>
+
+            <section>
+                <h2>2. Meshing</h2>
+                <p>In FEM, the geometry is divided into smaller, manageable units called elements. The process of dividing the geometry into these elements is called meshing. The quality of the mesh significantly impacts the accuracy and efficiency of the simulation. A finer mesh (with smaller elements) can provide more detailed results but requires more computational power.</p>
+            </section>
+
+            <section>
+                <h2>3. Material Properties</h2>
+                <p>You assign material properties to different parts of the model, such as elasticity, density, thermal conductivity, or other relevant physical properties. These properties influence how the elements behave under load or other forces.</p>
+            </section>
+
+            <section>
+                <h2>4. Boundary Conditions</h2>
+                <p>This involves defining how the system interacts with its environment. Boundary conditions describe how the structure is constrained or subjected to external forces. For example, you might specify fixed supports (places where the structure cannot move) or loads (forces, pressure, or temperature applied to the system).</p>
+            </section>
+
+            <section>
+                <h2>5. Loading Conditions</h2>
+                <p>You define the loads or external forces acting on the system. This could include forces, pressures, displacements, or thermal effects. Loading conditions are crucial because they directly affect the behavior of the system during analysis.</p>
+            </section>
+
+            <section>
+                <h2>6. Solver Settings</h2>
+                <p>You select or configure the solver settings, such as the type of analysis (static, dynamic, thermal, etc.), solution methods, and numerical techniques.</p>
+            </section>
+        </section>
+    </main>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            FEA Chatbot
+            <button id="minimize-btn">&#8212;</button> <!-- Minimize button -->
+        </div>
+        <div class="chatbot-messages">
+            <div class="message bot-message">Hi there! How can I help you about FEA and FEM today?</div>
+            <div class="message user-message">What is FEM?</div>
+            <div class="message bot-message">FEM stands for Finite Element Method...</div>
+        </div>
+        <div class="chatbot-input-area">
+            <input type="text" class="chatbot-input" placeholder="Type your message...">
+            <button class="chatbot-send-button">Send</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;2025 - Developed by Geovane. All rights reserved.</p>
+    </footer>
+    
+    <script src="../JavaScript/chatbot.js" defer></script>
+</body>
+
+</html>
